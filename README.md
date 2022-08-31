@@ -2,14 +2,18 @@
 Implementation based on [Tutorial found on www.graphql-java.com](https://www.graphql-java.com/tutorials/getting-started-with-spring-boot/)
 
 ### Versions and Dependencies
-Spring Boot 2.7.3, using spring-boot-starter-graphql as single dependency for GraphQL
+Spring Boot 2.7.3, using spring-boot-starter-graphql as single dependency for GraphQL.
 
-cf. [blog.devgenius.io](https://blog.devgenius.io/graphql-with-spring-boot-starter-graphql-7b406998c0b5)
-describes the migration from Spring Boot 2.1.6.RELEASE, using 
-* graphql-spring-boot-starter (5.0.2), together with 
+### History and Migration
+Before Spring Boot 2.7.0 the two dependencies: 
+* graphql-spring-boot-starter (5.0.2), together with
 * graphql-java-tools (5.2.4))
 
-... leading to the removal of the interfaces GraphQLQueryResolver and GraphQLMutationResolver
+... have been used along with implementation of the two interfaces GraphQLQueryResolver and GraphQLMutationResolver.
+Both are not required/supported since Spring Boot 2.7.0 and replaced with Annotations.  
+
+Also see [blog.devgenius.io](https://blog.devgenius.io/graphql-with-spring-boot-starter-graphql-7b406998c0b5)
+where migration to 2.7.0 from earlier versions is described.
 
 ### Example Query
 Navigate to http://localhost:8080/graphiql and place following query:
