@@ -1,6 +1,9 @@
 # Getting Started
 Implementation based on https://www.graphql-java.com/tutorials/getting-started-with-spring-boot/
 using Spring Boot 2.7.3 and spring-boot-starter-graphql
+(instead of Spring Boot 2.1.6.RELEASE and graphql-spring-boot-starter (5.0.2) together with graphql-java-tools (5.2.4))
+
+cf. https://blog.devgenius.io/graphql-with-spring-boot-starter-graphql-7b406998c0b5
 
 # Example Query
 Navigate to http://localhost:8080/graphiql and place following query
