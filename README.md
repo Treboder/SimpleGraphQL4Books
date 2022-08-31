@@ -1,13 +1,19 @@
 # Getting Started
-Implementation based on https://www.graphql-java.com/tutorials/getting-started-with-spring-boot/
-using Spring Boot 2.7.3 and spring-boot-starter-graphql
-(instead of Spring Boot 2.1.6.RELEASE and graphql-spring-boot-starter (5.0.2) together with graphql-java-tools (5.2.4))
+Implementation based on [Tutorial found on www.graphql-java.com](https://www.graphql-java.com/tutorials/getting-started-with-spring-boot/)
 
-cf. https://blog.devgenius.io/graphql-with-spring-boot-starter-graphql-7b406998c0b5
+### Versions and Dependencies
+Spring Boot 2.7.3, using spring-boot-starter-graphql as single dependency for GraphQL
 
-# Example Query
-Navigate to http://localhost:8080/graphiql and place following query
+cf. [blog.devgenius.io](https://blog.devgenius.io/graphql-with-spring-boot-starter-graphql-7b406998c0b5)
+describes the migration from Spring Boot 2.1.6.RELEASE, using 
+* graphql-spring-boot-starter (5.0.2), together with 
+* graphql-java-tools (5.2.4))
 
+... leading to the removal of the interfaces GraphQLQueryResolver and GraphQLMutationResolver
+
+### Example Query
+Navigate to http://localhost:8080/graphiql and place following query:
+```
 {
     bookById(id: "book-1"){
         id
@@ -19,6 +25,7 @@ Navigate to http://localhost:8080/graphiql and place following query
         }
     }
 }
+```
 
 ### Reference Documentation
 For further reference, please consider the following sections:
