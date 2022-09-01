@@ -1,6 +1,11 @@
 # Getting Started
 Implementation based on [Tutorial found on www.graphql-java.com](https://www.graphql-java.com/tutorials/getting-started-with-spring-boot/)
 
+### ToDo
+Activate /graphql endpoint
+- queries via http://localhost:8080/graphiql work as desired
+- http://localhost:8080/graphql/schema.json leads to 404
+
 ### Versions and Dependencies
 Spring Boot 2.7.3, using spring-boot-starter-graphql as single dependency for GraphQL.
 
