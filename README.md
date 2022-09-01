@@ -1,9 +1,10 @@
 # Getting Started
-Implementation based on [Tutorial found on www.graphql-java.com](https://www.graphql-java.com/tutorials/getting-started-with-spring-boot/)
+GraphQL interface exposed to endpoint http://localhost:8080/graphql
+based on tutorial from [www.graphql-java.com](https://www.graphql-java.com/tutorials/getting-started-with-spring-boot/)
 
 ### ToDo
-Activate /graphql endpoint
-- queries via http://localhost:8080/graphiql work as desired
+Activate /graphql/schema.json
+- queries via endpoints /graphql and /graphiql work as desired
 - http://localhost:8080/graphql/schema.json leads to 404
 
 ### Versions and Dependencies
@@ -20,8 +21,16 @@ Both are not required/supported since Spring Boot 2.7.0 and replaced with Annota
 Also see [blog.devgenius.io](https://blog.devgenius.io/graphql-with-spring-boot-starter-graphql-7b406998c0b5)
 where migration to 2.7.0 from earlier versions is described.
 
-### Example Query
+### Example Query via GraphiQL
 Navigate to http://localhost:8080/graphiql and place following query:
+```
+{
+    getAllBooks {
+        id
+        name
+    }
+}
+```
 ```
 {
     bookById(id: "book-1"){
@@ -33,6 +42,18 @@ Navigate to http://localhost:8080/graphiql and place following query:
             lastName
         }
     }
+}
+```
+
+### Example Queries via GraphQL (standard /graphql endpoint)
+Navigate to http://localhost:8080/graphql and send a POST Request with header:
+- key = Content-Type
+- value = application/json
+
+and following body:
+```
+{
+    "query":"{ getAllBooks { id } }"
 }
 ```
 
